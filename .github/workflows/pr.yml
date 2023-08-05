@@ -20,7 +20,7 @@ jobs:
         run: npm run type-check
 
   type-check-testpostinstall:
-    name: type-check
+    name: type-check-testpostinstall
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -36,7 +36,7 @@ jobs:
         run: npm run type-check
 
   type-check-testci:
-    name: type-check
+    name: type-check-testci
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
