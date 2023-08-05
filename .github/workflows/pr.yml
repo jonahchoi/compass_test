@@ -8,41 +8,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18
-          cache: "npm"
-      - name: Install dependencies
-        run: npm i --ci
-      - name: Create css types
-        run: npm run type-css
-      - name: Check types
-        run: npm run type-check
-
-  type-check-testpostinstall:
-    name: type-check-testpostinstall
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 18
-          cache: "npm"
-      - name: Install dependencies
-        run: npm i --ci
-      - name: Check types
-        run: npm run type-check
-
-  type-check-testci:
-    name: type-check-testci
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: "npm"
@@ -58,12 +24,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: "npm"
       - name: Install dependencies
-        run: npm i --ci
+        run: npm ci
       - name: Run format:check
         run: npm run format:check
       - name: Run lint
@@ -76,12 +42,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 18
           cache: "npm"
       - name: Install dependencies
-        run: npm i --ci
+        run: npm ci
       - name: Pre-pull Postgres image
         run: docker pull postgres:15
       - name: Run tests
