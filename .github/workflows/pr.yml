@@ -19,7 +19,7 @@ jobs:
       - name: Check types
         run: npm run type-check
 
-  type-check_testpostinstall:
+  type-check-testpostinstall:
     name: type-check
     runs-on: ubuntu-latest
     steps:
@@ -35,7 +35,7 @@ jobs:
       - name: Check types
         run: npm run type-check
 
-  type-check_testci:
+  type-check-testci:
     name: type-check
     runs-on: ubuntu-latest
     steps:
